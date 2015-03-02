@@ -23,7 +23,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AlertOnLabsTest extends SauceLabsFluentCase {
 
@@ -115,7 +115,7 @@ public class AlertOnLabsTest extends SauceLabsFluentCase {
 class AlertPage extends FluentPage {
   @Override
   public String getUrl() {
-    return LocalFluentCase.DEFAULT_URL + "alert.html";
+    return LocalFluentCase.BASE_URL + "alert.html";
   }
 
   @Override

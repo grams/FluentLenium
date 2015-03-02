@@ -20,22 +20,20 @@ import org.fluentlenium.assertj.custom.PageAssert;
 import org.fluentlenium.core.FluentPage;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import static org.mockito.Mockito.verify;
 
-public class PageFestAssertTest {
+public class PageAssertJTest {
     @Mock
     FluentPage fluentPage;
-    @InjectMocks
-    PageAssert pageAssert = FluentLeniumAssertions.assertThat(fluentPage);
+    PageAssert pageAssert;
 
     @Before
     public void before() {
         MockitoAnnotations.initMocks(this);
-
+        pageAssert = FluentLeniumAssertions.assertThat(fluentPage);
     }
 
     @Test
